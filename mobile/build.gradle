@@ -1,5 +1,17 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+buildscript {
+    ext.kotlin_version = '1.0.1'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+    }
+}
 
 android {
     compileSdkVersion 23
@@ -16,6 +28,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            resValue("string","spotify_client_id","d1aa1ee92a834ac6b7fcc51842b272f9")
+            resValue("string","spotify_client_secret","9db3e12630814cd9b1c4be38d470eae6")
         }
     }
 
@@ -36,15 +52,7 @@ dependencies {
     // This library handles music playback
     compile 'com.spotify.sdk:spotify-player:1.0.0-beta12@aar'
 }
-buildscript {
-    ext.kotlin_version = '1.0.1'
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
+
 repositories {
     mavenCentral()
     flatDir {
