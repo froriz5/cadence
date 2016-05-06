@@ -31,6 +31,10 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.google.android.gms:play-services:8.4.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    // This library handles authentication and authorization
+    compile 'com.spotify.sdk:spotify-auth:1.0.0-beta12@aar'
+    // This library handles music playback
+    compile 'com.spotify.sdk:spotify-player:1.0.0-beta12@aar'
 }
 buildscript {
     ext.kotlin_version = '1.0.1'
@@ -43,4 +47,7 @@ buildscript {
 }
 repositories {
     mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
 }
