@@ -32,8 +32,6 @@ class MainActivity : AppCompatActivity() {
                 .beginTransaction()
                 .replace(R.id.container, LibraryFragment().newInstance())
                 .commit()
-
-
     }
 
     private fun getSelectedTab(position: Int) {
