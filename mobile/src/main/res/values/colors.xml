@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">@color/spotify_grey_solid</color>
+    <color name="colorPrimaryDark">@color/spotify_black_solid</color>
+    <color name="colorAccent">@color/spotify_green</color>
+    
+    <!-- Custom Colors -->
+    <color name="spotify_white_solid">#ffffff</color>
+    <color name="spotify_sand_solid">#ecebe8</color>
+    <color name="spotify_grey_solid">#828282</color>
+    <color name="spotify_black_solid">#000000</color>
+    <color name="spotify_green">#84bd00</color>
 </resources>

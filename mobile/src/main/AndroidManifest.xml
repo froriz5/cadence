@@ -17,6 +17,12 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter android:label="@string/filter_title_spotify_uri_callback">
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="cadence"
+                    android:host="callback"/>
+            </intent-filter>
         </activity>
     </application>
 

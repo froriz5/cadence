@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">cadence</string>
+    <string name="app_name">Cadence</string>
+    <string name="filter_title_spotify_uri_callback">Spotify Uri Callback</string>
 </resources>
